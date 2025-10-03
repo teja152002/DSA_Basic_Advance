@@ -1,3 +1,5 @@
+package java.practice;
+
 import java.util.*;
 
 public class ArrayPractice {
