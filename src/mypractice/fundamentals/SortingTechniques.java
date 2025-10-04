@@ -14,6 +14,7 @@ public class SortingTechniques {
             arr[i] = sc.nextInt();
         }
 
+
         // Bubble Sort
         System.out.println("Bubble Sort");
         for(int i=0 ;i<n;i++) {
