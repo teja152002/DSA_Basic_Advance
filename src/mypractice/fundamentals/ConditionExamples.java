@@ -2,7 +2,7 @@ package mypractice.fundamentals;
 
 import java.util.Scanner;
 
-public class Basic {
+public class ConditionExamples {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter a number from 1 to 7 : ");
