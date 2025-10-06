@@ -10,9 +10,13 @@ public class MethodsExample extends AbstractMethodExample {
         System.out.println("Overriden display method present inside abstract class");
     }
 
+    public void screen(){
+        display();
+    }
+
     public static void run(){
         System.out.println("this is concrete method");
-        new MethodsExample().display();
+        new MethodsExample().screen();
 
     }
     public static void main(String[] args) {
