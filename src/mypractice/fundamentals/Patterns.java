@@ -89,11 +89,36 @@ public class Patterns {
         }
     }
 
+    public static void fullTriangle(int n){
+        for(int i=0;i<n;i++){
+            for(int j=0;j<n;j++){
+               // if(i+j>=n-1 && j-i<=n-1 && i-j<=n-1 && i+j<=3*n-3){
+                if(i+j>=(n-1)/2 && j-i<=(n-1)/2 && i-j<=(n-1)/2 && i+j <= (n-1)/2*3 ){
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+    }
+    public static void verticalTriangle(int n){
+        for(int i=0;i<2*n;i++){
+            for(int j=0;j<n;j++){
+                if(i>=j && i+j<=n+1){
+                    System.out.print("*");
+                } else{
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+    }
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter number of rows : ");
         int n = sc.nextInt();
-        reverseTriangle(n);
+        verticalTriangle(n);
     }
 }
