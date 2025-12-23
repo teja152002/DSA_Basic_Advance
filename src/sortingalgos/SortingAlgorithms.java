@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class SortingAlgorithms {
-    static void selectionSort(int[] arr){
+    static void selectionSort(int[] arr) {
         int n = arr.length;
         for (int k = 0; k < n - 1; k++) {
             int index = k;
@@ -19,7 +19,8 @@ public class SortingAlgorithms {
             arr[index] = temp;
         }
     }
-    static void bubbleSort(int[] nums){
+
+    static void bubbleSort(int[] nums) {
 //        int n = arr.length;
 //        for(int i=0; i<n-1;i++){
 //            for(int j=i+1; j<n;j++){
@@ -31,16 +32,17 @@ public class SortingAlgorithms {
 //            }
 //        }
         int n = nums.length;
-        for(int i=0; i<n; i++){
-            for(int j=0; j<n-i-1;j++){
-                if(nums[j]>nums[j+1]){
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n - i - 1; j++) {
+                if (nums[j] > nums[j + 1]) {
                     int temp = nums[j];
-                    nums[j] = nums[j+1];
-                    nums[j+1] = temp;
+                    nums[j] = nums[j + 1];
+                    nums[j + 1] = temp;
                 }
             }
         }
     }
+
     public static void main(String[] args) {
 //        Scanner sc = new Scanner(System.in);
 //        System.out.println("Enter number of elements : ");
@@ -50,7 +52,7 @@ public class SortingAlgorithms {
 //        for(int i=0; i<n;i++){
 //            arr[i] = sc.nextInt();
 //        }
-        int[] arr = {3,2,1}; // 13, 46, 24, 52, 20, 9
+        int[] arr = {3, 2, 1}; // 13, 46, 24, 52, 20, 9
         int n = arr.length;
 
         // Selection sort -> select minimum and swap it with first index and go on
@@ -59,4 +61,4 @@ public class SortingAlgorithms {
         bubbleSort(arr);
         System.out.println(Arrays.toString(arr));
     }
- }
+}
