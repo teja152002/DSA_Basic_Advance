@@ -21,7 +21,6 @@ public class QuickSort {
      * -> so that after this step array will look like -> 2 1 3 4 6 5 7 9
      * 3) repeat 1 and 2 until all elements are sorted.
      */
-
     private static void quickSort(int[] arr, int low, int high) {
         if (low < high) {
             int partition = partition(arr, low, high);
@@ -55,7 +54,7 @@ public class QuickSort {
 
     public static void main(String[] args) {
         int[] arr = {4, 6, 2, 5, 7, 9, 1, 3};
-        quickSort(arr, 0, arr.length-1);
+        quickSort(arr, 0, arr.length - 1);
         System.out.println(Arrays.toString(arr));
     }
 }
