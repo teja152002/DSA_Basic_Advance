@@ -11,7 +11,7 @@ public class QuickSort {
      * -> median element of an array
      * -> any random element from an array.
      * <p>
-     * Ex : 4 6 2 5 7 9 1 3  -> sortedd version will look like -> 1 2 3 4 5 6 7 9
+     * Ex :    4 6 2 5 7 9 1 3  -> sortedd version will look like -> 1 2 3 4 5 6 7 9
      * index-> 0 1 2 3 4 5 6 7
      * Algorithm :
      * 1) pick a pivot element and place it in correct position
@@ -31,13 +31,14 @@ public class QuickSort {
 
     private static int partition(int[] arr, int low, int high) {
         int pivot = arr[low];
-        int i = low;
+        int i = low + 1;
         int j = high;
-        while (i < j) {
-            while (arr[i] <= pivot && i <= high) {
+        while (i <= j) {
+            while (i <= high && arr[i] <= pivot) {
                 i++;
             }
-            while (arr[j] > pivot && j >= low) {
+            // Find element smaller than or equal to pivot
+            while (j >= low && arr[j] > pivot) {
                 j--;
             }
             if (i < j) {
@@ -53,7 +54,7 @@ public class QuickSort {
     }
 
     public static void main(String[] args) {
-        int[] arr = {4, 6, 2, 5, 7, 9, 1, 3};
+        int[] arr = {1, 9, 8, 7, 6, 5};
         quickSort(arr, 0, arr.length - 1);
         System.out.println(Arrays.toString(arr));
     }
